@@ -42,28 +42,42 @@ Route::middleware(['web', 'auth'])->group(function () {
 });
 
 
+// ======================
+// ROUTE UMUM (BOLEH TANPA LOGIN)
+// ======================
+Route::get('/cari-kereta', [KeretaController::class, 'index'])
+    ->name('kereta.cari');
 
-// 1️⃣ HALAMAN SUKSES (WAJIB DI ATAS)
-Route::get('/beli-tiket/sukses', [PelangganController::class, 'sukses'])
-    ->name('pelanggan.sukses');
+Route::get('/hasil-kereta', [KeretaController::class, 'hasil'])
+    ->name('kereta.hasil');
 
-// 2️⃣ FORM BELI TIKET (PAKAI KERETA)
-Route::get('/beli-tiket/{kereta}', [PelangganController::class, 'create'])
-    ->name('pelanggan.create');
+// ======================
+// ROUTE BELI TIKET (WAJIB LOGIN)
+// ======================
+Route::middleware('auth')->group(function () {
 
-// 3️⃣ SIMPAN DATA
-Route::post('/beli-tiket', [PelangganController::class, 'store'])
-    ->name('pelanggan.store');
+    // halaman sukses
+    Route::get('/beli-tiket/sukses', [PelangganController::class, 'sukses'])
+        ->name('pelanggan.sukses');
 
-Route::post('/beli-tiket', [PemesananController::class, 'store'])
-    ->name('beli-tiket.store');
+    // form beli tiket
+    Route::get('/beli-tiket/{kereta}', [PelangganController::class, 'create'])
+        ->name('pelanggan.create');
 
-Route::get('/cari-kereta', [KeretaController::class, 'index'])->name('kereta.cari');
-Route::get('/hasil-kereta', [KeretaController::class, 'hasil'])->name('kereta.hasil');
+    // simpan pemesanan (PAKAI SATU SAJA)
+    Route::post('/beli-tiket', [PemesananController::class, 'store'])
+        ->name('beli-tiket.store');
+});
 
+Route::middleware('auth')->group(function () {
 
-Route::post('/beli-tiket', [PemesananController::class, 'store'])
-    ->name('beli-tiket.store');
+    Route::get('/pesanan-saya', [PemesananController::class, 'index'])
+        ->name('pesanan.index');
+
+    Route::get('/pesanan-saya/struk/{kode_tiket}', [PemesananController::class, 'show'])
+        ->name('pesanan.struk');
+});
+
 
 Route::get('tiket/{kode}/struk', [TiketController::class, 'struk'])
     ->name('tiket.struk');

@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="min-h-screen pt-24 flex items-center justify-center bg-gray-100 px-4">
-    
+        @auth
         <form action="{{ route('pengaduan.store') }}" method="POST"
               class="bg-white w-full max-w-md rounded-xl shadow p-6 space-y-4">
             @csrf
@@ -28,7 +28,8 @@
             window.location.href = "{{ route('login') }}";
         </script>
         @endauth
-        </form>
+    </form>
+ 
     </div>
     </x-app-layout>
     

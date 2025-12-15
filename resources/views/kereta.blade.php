@@ -178,7 +178,6 @@ class="relative z-20 -mt-2">
                          Pesan Tiket
                      </a>
                      
-    
                 </div>
             </div>
     

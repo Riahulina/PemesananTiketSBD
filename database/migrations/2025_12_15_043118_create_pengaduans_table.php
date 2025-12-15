@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('judul');
             $table->enum('status', ['open', 'closed'])->default('open');
+            $table->enum('sender_type', ['user', 'admin']);
+            $table->text('message');
             $table->timestamps();
         });
         
