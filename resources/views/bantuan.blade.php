@@ -102,6 +102,28 @@
         </div>
     </section>
     
+    <!-- Tombol Pengaduan -->
+<section class="max-w-6xl mx-auto px-4 py-6 relative z-20">
+    <div class="bg-red-200 rounded-2xl shadow-xl p-6 
+                flex flex-col md:flex-row items-center justify-between gap-4">
+
+        <div class="text-gray-700">
+            <h3 class="text-xl font-bold mb-1">Masih Butuh Bantuan?</h3>
+            <p class="text-gray-600/90 text-sm">
+                Kirim pengaduan langsung ke admin kami
+            </p>
+        </div>
+
+        <a href="{{ route('pengaduan.create') }}"
+           class="bg-white text-red-600 font-semibold px-6 py-3 rounded-xl
+                  hover:bg-gray-100 transition">
+            📝 Buat Pengaduan
+        </a>
+
+    </div>
+</section>
+
+
     <!-- FAQ Section -->
     <section id="faq" class="max-w-4xl mx-auto px-4 py-14">
         <h2 class="text-3xl font-bold mb-4 text-center text-gray-900">❔ Pertanyaan yang Sering Diajukan</h2>

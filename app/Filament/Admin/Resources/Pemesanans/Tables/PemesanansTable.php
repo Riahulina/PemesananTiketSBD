@@ -2,9 +2,6 @@
 
 namespace App\Filament\Admin\Resources\Pemesanans\Tables;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\BadgeColumn;
@@ -22,16 +19,24 @@ class PemesanansTable
                 TextColumn::make('kereta.nama')
                     ->label('Kereta'),
 
+                // ✅ JADWAL DITAMPILKAN
+                TextColumn::make('jadwal')
+                    ->label('Jadwal')
+                    ->wrap(), // biar ga kepanjangan satu baris
+
                 TextColumn::make('tanggal_pemesanan')
+                    ->label('Tanggal Pesan')
                     ->dateTime('d M Y H:i'),
 
-                TextColumn::make('metode_pembayaran'),
+                TextColumn::make('metode_pembayaran')
+                    ->label('Metode'),
 
                 BadgeColumn::make('status_pembayaran')
+                    ->label('Status')
                     ->colors([
                         'warning' => 'pending',
                         'success' => 'lunas',
-                        'danger' => 'dibatalkan',
+                        'danger'  => 'dibatalkan',
                     ]),
             ])
             ->defaultSort('tanggal_pemesanan', 'desc');
