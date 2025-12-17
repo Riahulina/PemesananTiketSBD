@@ -10,7 +10,7 @@
 
         <div class="relative z-10 max-w-4xl mx-auto">
             <div class="text-5xl mb-4">💡</div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pusat Bantuan Ticketize</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pusat Bantuan Ticket.ze</h1>
             <p class="text-lg md:text-xl text-white/80 mb-8">Temukan jawaban cepat untuk semua pertanyaan Anda</p>
 
             <!-- Search Box -->
@@ -102,24 +102,6 @@
         </div>
     </section>
     
-    <!-- Tombol Pengaduan -->
-<section class="max-w-6xl mx-auto px-4 py-6 relative z-20">
-    <div class="bg-red-200 rounded-2xl shadow-xl p-6 
-                flex flex-col md:flex-row items-center justify-between gap-4">
-
-        <div class="text-gray-700">
-            <h3 class="text-xl font-bold mb-1">Masih Butuh Bantuan?</h3>
-            <p class="text-gray-600/90 text-sm">
-                Kirim pengaduan langsung ke admin kami
-            </p>
-        </div>
-
-        <a href="{{ route('pengaduan.create') }}"
-           class="bg-white text-red-600 font-semibold px-6 py-3 rounded-xl
-                  hover:bg-gray-100 transition">
-            📝 Buat Pengaduan
-        </a>
-
     </div>
 </section>
 
@@ -197,5 +179,54 @@
 
         </div>
     </section>
+
+     <!-- Tombol Pengaduan -->
+     <section class="max-w-6xl mx-auto px-4 py-8 relative z-20">
+        <div class="max-w-md mx-auto 
+                    bg-white
+                    rounded-2xl shadow-2xl p-8
+                    flex flex-col items-center text-center gap-4 ">
+    
+            <h3 class="text-2xl font-bold text-gray-700">
+                Masih Butuh Bantuan?
+            </h3>
+    
+            <p class="text-gray-700-sm leading-relaxed">
+                Kirim pengaduan langsung ke admin kami.<br>
+                Tim kami siap membantu Anda dengan cepat.
+            </p>
+    
+            <a href="{{ route('pengaduan.create') }}"
+               class="mt-4 w-full bg-orange-500 text-white
+                      font-semibold py-3 rounded-xl
+                      shadow-lg hover:shadow-xl hover:scale-105
+                      transition-all duration-300 text-center">
+                📝 Buat Pengaduan
+            </a>
+        </div>
+    </section>
+    <footer class="py-12 px-4 md:px-10 border-t border-white/10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div>
+                <h3 class="text-2xl font-bold gradient-text mb-4">Ticketize</h3>
+                <p class="text-gray-700 mb-4">Platform pemesanan tiket kereta api terpercaya di Indonesia.</p>
+            </div> 
+
+            <div>
+                <h4 class="font-bold mb-4">Kontak</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li>📧 info@ticketize.com</li>
+                    <li>📞 +62 21 1234 5678</li>
+                    <li>📍Medan, Indonesia</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="text-center text-gray-700 mt-12 pt-8 border-t border-white/10">
+            © 2025 Ticketize. Semua Hak Dilindungi.
+        </div>
+    </footer>
 
 </x-app-layout>

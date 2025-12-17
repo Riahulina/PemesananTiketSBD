@@ -11,7 +11,9 @@ use App\Http\Controllers\PengaduanController;
 
 Route::get('/', function () {
   return view('welcome');
-});
+})->name('home');
+
+
 Route::get('/bantuan', function () {
   return view('bantuan');
 });

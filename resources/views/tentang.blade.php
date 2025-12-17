@@ -11,36 +11,12 @@
     
         <!-- TEXT CONTENT -->
         <div class="relative z-10 text-center mt-10 px-4 animate-fade-in">
-            <h1 class="text-4xl md:text-6xl text-white font-bold mb-6">Tentang Ticketize</h1>
+            <h1 class="text-4xl md:text-6xl text-white font-bold mb-6">Tentang Ticket.ze</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Platform pemesanan tiket kereta api modern yang dirancang untuk memberikan pengalaman pemesanan yang cepat, mudah, dan aman bagi seluruh pengguna di Indonesia.
             </p>
         </div>
     
-    </section>
-    
-    
-    <!-- Story Section -->
-    <section class="max-w-6xl mx-auto px-4 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Cerita Kami</h2>
-                <p class="text-gray-800 leading-relaxed mb-4">
-                    Ticketize lahir dari keinginan sederhana: membuat pemesanan tiket kereta api semudah memesan makanan online. Pada tahun 2022, kami memulai perjalanan dengan tim kecil yang penuh semangat.
-                </p>
-                <p class="text-gray-800 leading-relaxed mb-4">
-                    Berangkat dari pengalaman pribadi yang sering mengalami kesulitan dalam memesan tiket kereta, kami bertekad menciptakan solusi yang tidak hanya mudah digunakan, tetapi juga aman dan terpercaya.
-                </p>
-                <p class="text-gray-800 leading-relaxed">
-                    Hari ini, dengan lebih dari 500.000 pengguna aktif dan 1 juta tiket yang telah terjual, kami terus berinovasi untuk memberikan pengalaman terbaik dalam setiap perjalanan Anda.
-                </p>
-            </div>
-
-            <div>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80" 
-                     class="rounded-2xl shadow-2xl" alt="Team">
-            </div>
-        </div>
     </section>
 
     <!-- Values -->
@@ -94,43 +70,55 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Bertemu dengan Tim Kami</h2>
-                <p class="text-white/70 text-lg">Orang-orang luar biasa di balik Ticketize</p>
+                <p class="text-gray-700 text-lg">Orang-orang luar biasa di balik Ticket.ze</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
                 <!-- Card 1 -->
                 <div class="text-center glass-effect p-8 rounded-2xl shadow-lg">
-                    <img src="https://randomuser.me/api/portraits/men/45.jpg" 
+                    <img src="img/ria.jpg" 
                          class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-red-500/30">
-                    <h3 class="text-2xl font-bold mb-2">Rangga Pratama</h3>
-                    <p class="text-red-400 font-semibold mb-3">CEO & Founder</p>
-                    <p class="text-white/60 text-sm mb-4">
-                        Visioner di balik Ticketize dengan 10+ tahun pengalaman di industri teknologi
+                    <h3 class="text-2xl font-bold mb-2">Riah Ulina</h3>
+                    <p class="text-red-400 font-semibold mb-3">Programer</p>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Programmer yang mengembangkan sistem Ticket.ze agar berjalan stabil dan efisien
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="text-center glass-effect p-8 rounded-2xl shadow-lg">
+                    <img src="img/uswa.jpg" 
+                         class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-red-500/30">
+                    <h3 class="text-2xl font-bold mb-2">Syafitri Uswatun</h3>
+                    <p class="text-red-400 font-semibold mb-3">UI Designer</p>
+                    <p class="text-gray-700 text-sm mb-4">
+                        UI Designer yang merancang tampilan Ticketize dengan fokus kenyamanan pengguna
                     </p>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="text-center glass-effect p-8 rounded-2xl shadow-lg">
-                    <img src="https://randomuser.me/api/portraits/women/65.jpg" 
+                    <img src="img/ditaa.JPG" 
                          class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-red-500/30">
-                    <h3 class="text-2xl font-bold mb-2">Nadia Safira</h3>
-                    <p class="text-red-400 font-semibold mb-3">Chief Technology Officer</p>
-                    <p class="text-white/60 text-sm mb-4">
-                        Expert dalam sistem keamanan dan arsitektur aplikasi modern
+                    <h3 class="text-2xl font-bold mb-2">Dita Liana</h3>
+                    <p class="text-red-400 font-semibold mb-3">Perancangan Sistem</p>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Bertanggung jawab merancang alur, struktur, dan kebutuhan sistem Ticket.ze
                     </p>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="text-center glass-effect p-8 rounded-2xl shadow-lg">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                    <img src="img/naya.JPG" 
                          class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-red-500/30">
-                    <h3 class="text-2xl font-bold mb-2">Fauzan Maulana</h3>
-                    <p class="text-red-400 font-semibold mb-3">Lead UI/UX Designer</p>
-                    <p class="text-white/60 text-sm mb-4">
-                        Menciptakan pengalaman pengguna yang intuitif dan menyenangkan
+                    <h3 class="text-2xl font-bold mb-2">Nurul Inayah</h3>
+                    <p class="text-red-400 font-semibold mb-3">Perancangan Sistem</p>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Bertanggung jawab merancang alur, struktur, dan kebutuhan sistem Ticket.ze
                     </p>
                 </div>
+                
 
             </div>
         </div>
@@ -140,7 +128,7 @@
     <section class="py-20 px-4 text-center">
         <div class="max-w-3xl mx-auto glass-effect p-12 rounded-2xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Bergabunglah dengan Perjalanan Kami</h2>
-            <p class="text-white/70 mb-8 text-lg">
+            <p class="text-gray-700 mb-8 text-lg">
                 Mulai pengalaman pemesanan tiket kereta yang lebih baik hari ini
             </p>
 
@@ -149,9 +137,7 @@
                     🎫 Pesan Tiket Sekarang
                 </button>
 
-                <button class= "glass-effect p-8  text-center rounded-2xl shadow-2xl overflow-hidden hover-liftpx-8 py-4 bg-white text-gray-900  font-bold text-lg hover:shadow-2xl hover:scale-105 transition">
-                    💼 Karir di Ticketize
-                </button>
+                
             </div>
         </div>
     </section>
@@ -162,39 +148,21 @@
 
             <div>
                 <h3 class="text-2xl font-bold gradient-text mb-4">Ticketize</h3>
-                <p class="text-white/60 mb-4">Platform pemesanan tiket kereta api terpercaya di Indonesia.</p>
-            </div>
-
-            <div>
-                <h4 class="font-bold mb-4">Layanan</h4>
-                <ul class="space-y-2 text-white/60">
-                    <li><a href="#" class="hover:text-red-400 transition">Kereta Api</a></li>
-                    <li><a href="#" class="hover:text-red-400 transition">Promo</a></li>
-                    <li><a href="#" class="hover:text-red-400 transition">Jadwal</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-bold mb-4">Perusahaan</h4>
-                <ul class="space-y-2 text-white/60">
-                    <li><a href="#" class="hover:text-red-400 transition">Tentang Kami</a></li>
-                    <li><a href="#" class="hover:text-red-400 transition">Karir</a></li>
-                    <li><a href="#" class="hover:text-red-400 transition">Blog</a></li>
-                </ul>
-            </div>
+                <p class="text-gray-700 mb-4">Platform pemesanan tiket kereta api terpercaya di Indonesia.</p>
+            </div> 
 
             <div>
                 <h4 class="font-bold mb-4">Kontak</h4>
-                <ul class="space-y-2 text-white/60">
+                <ul class="space-y-2 text-gray-700">
                     <li>📧 info@ticketize.com</li>
                     <li>📞 +62 21 1234 5678</li>
-                    <li>📍 Jakarta, Indonesia</li>
+                    <li>📍Medan, Indonesia</li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="text-center text-white/40 mt-12 pt-8 border-t border-white/10">
+        <div class="text-center text-gray-700 mt-12 pt-8 border-t border-white/10">
             © 2025 Ticketize. Semua Hak Dilindungi.
         </div>
     </footer>

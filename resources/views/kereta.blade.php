@@ -187,65 +187,82 @@ class="relative z-20 -mt-2">
     </section>
     
     <!-- Penawaran Section -->
-    <section id="kereta" class="py-20 px-4 md:px-10 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Penawaran Spesial Kereta Api</h2>
-        <p class="text-white/70 mb-12 max-w-2xl mx-auto">Dapatkan harga terbaik dan paket menarik untuk perjalanan Anda</p>
-
+    <section id="kelas-kereta" class="py-20 px-4 md:px-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Pilihan Kelas Kereta
+        </h2>
+        <p class="text-white/70 mb-12 max-w-2xl mx-auto">
+            Sesuaikan perjalanan Anda dengan kenyamanan yang diinginkan
+        </p>
+    
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Promo 1 -->
-            <div class="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden hover-lift">
-                <div class="h-48 bg-cover bg-center"  <img src="{{ asset('img/bgf.png') }}" 
-                class="absolute inset-0 w-full h-full object-cover">"></div>
+    
+            <!-- Ekonomi -->
+            <div class="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition duration-300">
+                <div class="relative h-52">
+                    <img src="{{ asset('img/ekonomi.png') }}"
+                         class="absolute inset-0 w-full h-full object-cover"
+                         alt="Kereta Ekonomi">
+                    <span class="absolute top-4 left-4 bg-blue-100 text-blue-700 
+                                 px-3 py-1 rounded-full text-sm font-semibold">
+                        Ekonomi
+                    </span>
+                </div>
+    
                 <div class="p-6">
-                    <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Promo Terbatas</span>
-                    <h3 class="font-bold text-xl mt-4 mb-2">Diskon Tiket Kereta</h3>
-                    <p class="text-gray-600 mb-4">Hemat hingga 30% untuk perjalanan Anda</p>
-                    <div class="flex items-baseline gap-2 mb-4">
-                        <p class="text-red-500 font-bold text-3xl">120.000</p>
-                        <p class="text-gray-500 line-through">170.000</p>
-                        <p class="text-gray-600">IDR</p>
-                    </div>
-                    <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
-                        Pesan Sekarang
-                    </button>
+                    <h3 class="font-bold text-xl mb-2">Kelas Ekonomi</h3>
+                    <p class="text-gray-600 mb-6">
+                        Harga terjangkau untuk perjalanan nyaman sehari-hari
+                    </p>
+                    
                 </div>
             </div>
-
-            <!-- Promo 2 -->
-            <div class="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden hover-lift">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80');"></div>
+    
+            <!-- Bisnis -->
+            <div class="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition duration-300">
+                <div class="relative h-52">
+                    <img src="{{ asset('img/bisnis.png') }}"
+                         class="absolute inset-0 w-full h-full object-cover"
+                         alt="Kereta Bisnis">
+                    <span class="absolute top-4 left-4 bg-orange-100 text-orange-700 
+                                 px-3 py-1 rounded-full text-sm font-semibold">
+                        Bisnis
+                    </span>
+                </div>
+    
                 <div class="p-6">
-                    <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">Paket Hemat</span>
-                    <h3 class="font-bold text-xl mt-4 mb-2">Paket Perjalanan Lengkap</h3>
-                    <p class="text-gray-600 mb-4">Tiket kereta + makanan + minuman</p>
-                    <div class="flex items-baseline gap-2 mb-4">
-                        <p class="text-red-500 font-bold text-3xl">650.000</p>
-                        <p class="text-gray-600">IDR</p>
-                    </div>
-                    <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
-                        Lihat Detail
-                    </button>
+                    <h3 class="font-bold text-xl mb-2">Kelas Bisnis</h3>
+                    <p class="text-gray-600 mb-6">
+                        Kenyamanan ekstra dengan ruang duduk lebih lega
+                    </p>
+                   
                 </div>
             </div>
-
-            <!-- Promo 3 -->
-            <div class="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden hover-lift">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506181961121-3f36e3c5e98c?q=80');"></div>
+    
+            <!-- Eksekutif -->
+            <div class="bg-white text-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition duration-300">
+                <div class="relative h-52">
+                    <img src="{{ asset('img/eksekutif.png') }}"
+                         class="absolute inset-0 w-full h-full object-cover"
+                         alt="Kereta Eksekutif">
+                    <span class="absolute top-4 left-4 bg-green-100 text-green-700 
+                                 px-3 py-1 rounded-full text-sm font-semibold">
+                        Eksekutif
+                    </span>
+                </div>
+    
                 <div class="p-6">
-                    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Populer</span>
-                    <h3 class="font-bold text-xl mt-4 mb-2">Kereta Eksekutif</h3>
-                    <p class="text-gray-600 mb-4">Perjalanan premium dengan fasilitas terbaik</p>
-                    <div class="flex items-baseline gap-2 mb-4">
-                        <p class="text-red-500 font-bold text-3xl">850.000</p>
-                        <p class="text-gray-600">IDR</p>
-                    </div>
-                    <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
-                        Pesan Sekarang
-                    </button>
+                    <h3 class="font-bold text-xl mb-2">Kelas Eksekutif</h3>
+                    <p class="text-gray-600 mb-6">
+                        Memberikan perjalanan premium dengan fasilitas terbaik
+                    </p>
+                    
                 </div>
             </div>
+    
         </div>
     </section>
+    
 
     <!-- Testimoni Section -->
     <section class="py-20 px-4 md:px-10 bg-gray-50">
@@ -282,53 +299,27 @@ class="relative z-20 -mt-2">
 
     <!-- Footer -->
     <!-- Footer -->
-<footer class="py-16 px-6 md:px-12 bg-white text-gray-800 border-t border-gray-200">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer class="py-12 px-4 md:px-10 border-t border-white/10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
-        <!-- Brand -->
-        <div>
-            <h3 class="text-3xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent mb-4">
-                Ticketize
-            </h3>
-            <p class="text-gray-600">
-                Platform pemesanan tiket kereta api terpercaya di Indonesia.
-            </p>
+            <div>
+                <h3 class="text-2xl font-bold gradient-text mb-4">Ticket.ze</h3>
+                <p class="text-gray-700 mb-4">Platform pemesanan tiket kereta api terpercaya di Indonesia.</p>
+            </div> 
+
+            <div>
+                <h4 class="font-bold mb-4">Kontak</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li>📧 info@ticketize.com</li>
+                    <li>📞 +62 21 1234 5678</li>
+                    <li>📍Medan, Indonesia</li>
+                </ul>
+            </div>
+
         </div>
 
-        <!-- Layanan -->
-        <div>
-            <h4 class="font-bold text-gray-900 mb-4">Layanan</h4>
-            <ul class="space-y-2 text-gray-600">
-                <li><a href="#" class="hover:text-red-500 transition-colors">Kereta Api</a></li>
-                <li><a href="#" class="hover:text-red-500 transition-colors">Promo</a></li>
-                <li><a href="#" class="hover:text-red-500 transition-colors">Jadwal</a></li>
-            </ul>
+        <div class="text-center text-gray-700 mt-12 pt-8 border-t border-white/10">
+            © 2025 Ticketize. Semua Hak Dilindungi.
         </div>
-
-        <!-- Perusahaan -->
-        <div>
-            <h4 class="font-bold text-gray-900 mb-4">Perusahaan</h4>
-            <ul class="space-y-2 text-gray-600">
-                <li><a href="#" class="hover:text-red-500 transition-colors">Tentang Kami</a></li>
-                <li><a href="#" class="hover:text-red-500 transition-colors">Karir</a></li>
-                <li><a href="#" class="hover:text-red-500 transition-colors">Blog</a></li>
-            </ul>
-        </div>
-
-        <!-- Kontak -->
-        <div>
-            <h4 class="font-bold text-gray-900 mb-4">Kontak</h4>
-            <ul class="space-y-2 text-gray-600">
-                <li>📧 info@ticketize.com</li>
-                <li>📞 +62 21 1234 5678</li>
-                <li>📍 Jakarta, Indonesia</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="text-center text-gray-500 mt-12 pt-8 border-t border-gray-200">
-        © 2025 Ticketize. Semua Hak Dilindungi.
-    </div>
-</footer>
+    </footer>
 </x-app-layout>

@@ -13,84 +13,58 @@
             <div class="absolute inset-0 bg-gradient-to-b 
                 from-gray-900/40 via-gray-900/80 to-red-700/90"></div>
 
-            <div class="relative z-20 text-center w-full max-w-4xl px-4">
-                
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-10 leading-tight drop-shadow-xl">
-                    Perjalanan Kereta Api Anda,<br> Lebih Mudah dengan Satu Klik
+            <div class="relative z-20 flex flex-col items-center text-center 
+                w-full max-w-4xl px-6">
+
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white 
+                    mb-6 leading-tight drop-shadow-xl">
+                    Perjalanan Kereta Api Anda,<br>
+                    Lebih Mudah dengan Satu Klik
                 </h1>
 
-                <!-- FORM PENCARIAN -->
-                <form action="{{ route('kereta.hasil') }}" method="GET">
+                <div class="text-base sm:text-lg text-white 
+                    mb-10 space-y-1 drop-shadow-lg">
+                    <p>Mau pergi tapi takut kehabisan tiket?</p>
+                    <p>Kini <span class="font-semibold">Tiket.ez</span> hadir sebagai solusi untuk kamu.</p>
+                    <p>Pesan tiket kereta api secara online dengan cepat dan mudah.</p>
+                </div>
 
-                    <div class="max-w-5xl  bg-white text-gray-800 p-6 md:p-8 
-                                rounded-2xl shadow-2xl -mt-2 relative z-20 
-                                mx-4 md:mx-auto animate-fade-in">
-
-                        <!-- HEADER FORM -->
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="text-2xl">🚆</span>
-                            <h3 class="text-red-600 font-bold text-xl">
-                                Cari Tiket Kereta Api
-                            </h3>
-                        </div>
-
-                        <!-- INPUT GRID -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-
-                            <!-- ASAL -->
-                            <div>
-                                <label class="text-sm text-gray-600 mb-1 block">Stasiun Asal</label>
-                                <input type="text" name="asal" placeholder="Contoh: Jakarta Pusat" 
-                                       class="border-2 border-gray-200 p-3 rounded-lg w-full 
-                                       focus:border-red-500 focus:outline-none transition">
-                            </div>
-
-                            <!-- TUJUAN -->
-                            <div>
-                                <label class="text-sm text-gray-600 mb-1 block">Stasiun Tujuan</label>
-                                <input type="text" name="tujuan" placeholder="Contoh: Surabaya" 
-                                       class="border-2 border-gray-200 p-3 rounded-lg w-full
-                                       focus:border-red-500 focus:outline-none transition">
-                            </div>
-
-                            <!-- TANGGAL -->
-                            <div>
-                                <label class="text-sm text-gray-600 mb-1 block">Tanggal Keberangkatan</label>
-                                <input type="date" name="tanggal"
-                                       class="border-2 border-gray-200 p-3 rounded-lg w-full
-                                       focus:border-red-500 focus:outline-none transition">
-                            </div>
-
-                        </div>
-
-                        <!-- KELAS & TOMBOL -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-                            <select name="kelas" 
-                                    class="border-2 border-gray-200 p-3 rounded-lg w-full 
-                                    focus:border-red-500 focus:outline-none transition">
-                                <option value="">Semua Kelas</option>
-                                <option value="Ekonomi">1. Ekonomi</option>
-                                <option value="Bisnis">2. Bisnis</option>
-                                <option value="Eksekutif">3. Eksekutif</option>
-                            </select>
-
-                            <button type="submit"
-                                class="bg-gradient-to-r from-red-500 to-orange-500 
-                                       text-gray-600 p-3 rounded-lg font-bold 
-                                       hover:shadow-xl hover:scale-105 
-                                       transition-all duration-300 md:col-span-2">
-                                🔍 Cari Tiket Sekarang
-                            </button>
-
-                        </div>
-
-                    </div>
-                </form>
-
+                <a href="/kereta">
+                    <button
+                        class="px-8 py-3 bg-orange-500 text-white rounded-xl 
+                            font-semibold text-base sm:text-lg
+                            hover:bg-orange-600 hover:scale-105
+                            transition-all duration-300 shadow-md">
+                        Beli Sekarang
+                    </button>
+                </a>
             </div>
+
         </section>
 
     </div>
+    <footer class="py-12 px-4 md:px-10 border-t border-white/10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div>
+                <h3 class="text-2xl font-bold gradient-text mb-4">Ticketize</h3>
+                <p class="text-gray-700 mb-4">Platform pemesanan tiket kereta api terpercaya di Indonesia.</p>
+            </div> 
+
+            <div>
+                <h4 class="font-bold mb-4">Kontak</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li>📧 info@ticketize.com</li>
+                    <li>📞 +62 21 1234 5678</li>
+                    <li>📍Medan, Indonesia</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="text-center text-gray-700 mt-12 pt-8 border-t border-white/10">
+            © 2025 Ticketize. Semua Hak Dilindungi.
+        </div>
+    </footer>
 
 </x-app-layout>

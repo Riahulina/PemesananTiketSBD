@@ -5,7 +5,7 @@
         <div class="flex items-center space-x-3">
             <img src="{{ asset('img/logo.png') }}" alt="Logo" class="h-12 w-auto object-contain">
             <h1 class="text-xl md:text-2xl font-bold text-white tracking-wide">
-                Ticketize
+                Ticket.ez
             </h1>
         </div>
 
