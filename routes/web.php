@@ -10,35 +10,35 @@ use App\Http\Controllers\PengaduanController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 Route::get('/bantuan', function () {
-    return view('bantuan');
+  return view('bantuan');
 });
 Route::get('/kereta', function () {
-    return view('kereta');
+  return view('kereta');
 });
 Route::get('/tentang', function () {
-    return view('tentang');
+  return view('tentang');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+  return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 use App\Models\Kereta;
 
 Route::get('/kereta', function () {
-    $keretas = Kereta::all();
-    return view('kereta', compact('keretas'));
+  $keretas = Kereta::all();
+  return view('kereta', compact('keretas'));
 });
 
 Route::middleware(['web', 'auth'])->group(function () {
-    Route::get('/pengaduan', [PengaduanController::class, 'create'])
-        ->name('pengaduan.create');
+  Route::get('/pengaduan', [PengaduanController::class, 'create'])
+    ->name('pengaduan.create');
 
-    Route::post('/pengaduan', [PengaduanController::class, 'store'])
-        ->name('pengaduan.store');
+  Route::post('/pengaduan', [PengaduanController::class, 'store'])
+    ->name('pengaduan.store');
 });
 
 
@@ -46,59 +46,69 @@ Route::middleware(['web', 'auth'])->group(function () {
 // ROUTE UMUM (BOLEH TANPA LOGIN)
 // ======================
 Route::get('/cari-kereta', [KeretaController::class, 'index'])
-    ->name('kereta.cari');
+  ->name('kereta.cari');
 
 Route::get('/hasil-kereta', [KeretaController::class, 'hasil'])
-    ->name('kereta.hasil');
+  ->name('kereta.hasil');
 
 // ======================
 // ROUTE BELI TIKET (WAJIB LOGIN)
 // ======================
 Route::middleware('auth')->group(function () {
 
-    // halaman sukses
-    Route::get('/beli-tiket/sukses', [PelangganController::class, 'sukses'])
-        ->name('pelanggan.sukses');
+  // halaman sukses
+  Route::get('/beli-tiket/sukses', [PelangganController::class, 'sukses'])
+    ->name('pelanggan.sukses');
 
-    // form beli tiket
-    Route::get('/beli-tiket/{kereta}', [PelangganController::class, 'create'])
-        ->name('pelanggan.create');
+  // form beli tiket
+  Route::get('/beli-tiket/{kereta}', [PelangganController::class, 'create'])
+    ->name('pelanggan.create');
 
-    // simpan pemesanan (PAKAI SATU SAJA)
-    Route::post('/beli-tiket', [PemesananController::class, 'store'])
-        ->name('beli-tiket.store');
+  // simpan pemesanan (PAKAI SATU SAJA)
+  Route::post('/beli-tiket', [PemesananController::class, 'store'])
+    ->name('beli-tiket.store');
 });
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/pesanan-saya', [PemesananController::class, 'index'])
-        ->name('pesanan.index');
+  Route::get('/pesanan-saya', [PemesananController::class, 'index'])
+    ->name('pesanan.index');
 
-    Route::get('/pesanan-saya/struk/{kode_tiket}', [PemesananController::class, 'show'])
-        ->name('pesanan.struk');
+  Route::get('/pesanan-saya/struk/{kode_tiket}', [PemesananController::class, 'show'])
+    ->name('pesanan.struk');
 });
 
 
 Route::get('tiket/{kode}/struk', [TiketController::class, 'struk'])
-    ->name('tiket.struk');
-Route::get('/pengaduan', [PengaduanController::class, 'create'])->name('pengaduan.create');
-Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
+  ->name('tiket.struk');
 
+Route::middleware('auth')->group(function () {
+  Route::get('/pengaduan', [PengaduanController::class, 'create'])->name('pengaduan.create');
+  Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
+
+
+  Route::get('/pengaduan-saya', [PengaduanController::class, 'index'])
+    ->name('pengaduan.index');
+
+
+  Route::get('/pengaduan/{pengaduan}', [PengaduanController::class, 'show'])
+    ->name('pengaduan.show');
+});
 
 // Route::post('/tiket/{kode}/struk', [TiketController::class, 'struk'])
 //     ->name('tiket.struk');
 
-    Route::get('/tiket/{kode}/qr', function ($kode) {
-        return response()->stream(function () use ($kode) {
-            echo \SimpleSoftwareIO\QrCode\Facades\QrCode::size(200)
-                ->generate($kode);
-        }, 200, ['Content-Type' => 'image/svg+xml']);
-    })->name('tiket.qr');
+Route::get('/tiket/{kode}/qr', function ($kode) {
+  return response()->stream(function () use ($kode) {
+    echo \SimpleSoftwareIO\QrCode\Facades\QrCode::size(200)
+      ->generate($kode);
+  }, 200, ['Content-Type' => 'image/svg+xml']);
+})->name('tiket.qr');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+  Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+  Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+  Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

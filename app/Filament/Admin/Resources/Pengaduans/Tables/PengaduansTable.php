@@ -5,52 +5,49 @@ namespace App\Filament\Admin\Resources\Pengaduans\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables;
-use Filament\Tables\Table;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
 
 class PengaduansTable
 {
-    public static function configure(Table $table): Table
-    {
-        return $table
-            ->columns([
-                TextColumn::make('id')
-                    ->label('ID')
-                    ->sortable(),
+  public static function configure(Table $table): Table
+  {
+    return $table
+      ->columns([
+        TextColumn::make('user.name')
+          ->numeric()
+          ->sortable(),
+        TextColumn::make('judul')
+          ->searchable(),
+        BadgeColumn::make('status')
+          ->colors([
+            'warning' => 'diproses',
+            'info' => 'ditanggapi',
+            'success' => 'selesai',
+          ]),
 
-                TextColumn::make('user.name')
-                    ->label('Pengguna')
-                    ->searchable()
-                    ->sortable(),
-
-                TextColumn::make('judul')
-                    ->label('Judul Pengaduan')
-                    ->searchable()
-                    ->wrap(),
-
-                TextColumn::make('status')
-                    ->badge()
-                    ->colors([
-                        'danger'  => 'closed',
-                        'warning' => 'open',
-                    ])
-                    ->label('Status'),
-
-                TextColumn::make('created_at')
-                    ->label('Tanggal')
-                    ->dateTime('d M Y H:i')
-                    ->sortable(),
-            ])
-            ->defaultSort('created_at', 'desc')
-            ->recordActions([
-                EditAction::make()
-                    ->label('Detail'),
-            ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
-            ]);
-    }
+        TextColumn::make('status')
+          ->badge(),
+        TextColumn::make('created_at')
+          ->dateTime()
+          ->sortable()
+          ->toggleable(isToggledHiddenByDefault: true),
+        TextColumn::make('updated_at')
+          ->dateTime()
+          ->sortable()
+          ->toggleable(isToggledHiddenByDefault: true),
+      ])
+      ->filters([
+        //
+      ])
+      ->recordActions([
+        EditAction::make(),
+      ])
+      ->toolbarActions([
+        BulkActionGroup::make([
+          DeleteBulkAction::make(),
+        ]),
+      ]);
+  }
 }

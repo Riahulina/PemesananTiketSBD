@@ -2,25 +2,28 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Pengaduan extends Model
 {
-    protected $fillable = [
-        'user_id',
-        'judul',
-        'status',
-    ];
+  use HasFactory;
 
-    // pengaduan punya banyak pesan (chat)
-    public function messages()
-    {
-        return $this->hasMany(PengaduanMessage::class);
-    }
+  protected $fillable = [
+    'user_id',
+    'judul',
+    'deskripsi',
+    'kategori',
+    'status',
+  ];
 
-    // pengaduan milik satu pelanggan
-    public function user()
-    {
-        return $this->belongsTo(Pelanggan::class, 'user_id', 'id_user');
-    }
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
+
+  public function tanggapans()
+  {
+    return $this->hasMany(Tanggapan::class);
+  }
 }

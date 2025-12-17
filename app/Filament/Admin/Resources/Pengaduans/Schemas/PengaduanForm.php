@@ -2,6 +2,9 @@
 
 namespace App\Filament\Admin\Resources\Pengaduans\Schemas;
 
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 
 class PengaduanForm
@@ -10,7 +13,19 @@ class PengaduanForm
     {
         return $schema
             ->components([
-                //
+                TextInput::make('user_id')
+                    ->required()
+                    ->numeric(),
+                TextInput::make('judul')
+                    ->required(),
+                Textarea::make('deskripsi')
+                    ->required()
+                    ->columnSpanFull(),
+                TextInput::make('kategori'),
+                Select::make('status')
+                    ->options(['diproses' => 'Diproses', 'ditanggapi' => 'Ditanggapi', 'selesai' => 'Selesai'])
+                    ->default('diproses')
+                    ->required(),
             ]);
     }
 }
