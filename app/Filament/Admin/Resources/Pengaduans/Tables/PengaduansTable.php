@@ -2,6 +2,8 @@
 
 namespace App\Filament\Admin\Resources\Pengaduans\Tables;
 
+use App\Filament\Admin\Resources\Pengaduans\PengaduanResource;
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -16,7 +18,6 @@ class PengaduansTable
     return $table
       ->columns([
         TextColumn::make('user.name')
-          ->numeric()
           ->sortable(),
         TextColumn::make('judul')
           ->searchable(),
@@ -42,12 +43,17 @@ class PengaduansTable
         //
       ])
       ->recordActions([
-        EditAction::make(),
+        // 
+        Action::make('Klik Untuk Menanggapi')->disabled()
       ])
+      // ->recordActions([])
+      // ->recordUrl(fn($record) => PengaduanResource::getUrl('edit', ['record' => $record]))
+
       ->toolbarActions([
         BulkActionGroup::make([
           DeleteBulkAction::make(),
         ]),
+
       ]);
   }
 }

@@ -9,23 +9,22 @@ use Filament\Schemas\Schema;
 
 class PengaduanForm
 {
-    public static function configure(Schema $schema): Schema
-    {
-        return $schema
-            ->components([
-                TextInput::make('user_id')
-                    ->required()
-                    ->numeric(),
-                TextInput::make('judul')
-                    ->required(),
-                Textarea::make('deskripsi')
-                    ->required()
-                    ->columnSpanFull(),
-                TextInput::make('kategori'),
-                Select::make('status')
-                    ->options(['diproses' => 'Diproses', 'ditanggapi' => 'Ditanggapi', 'selesai' => 'Selesai'])
-                    ->default('diproses')
-                    ->required(),
-            ]);
-    }
+  public static function configure(Schema $schema): Schema
+  {
+    return $schema
+      ->components([
+        TextInput::make('user.name')
+          ->disabled(),
+        TextInput::make('judul')
+          ->required(),
+        Textarea::make('deskripsi')
+          ->required()
+          ->columnSpanFull(),
+        TextInput::make('kategori'),
+        Select::make('status')
+          ->options(['diproses' => 'Diproses', 'ditanggapi' => 'Ditanggapi', 'selesai' => 'Selesai'])
+          ->default('diproses')
+          ->required(),
+      ]);
+  }
 }
